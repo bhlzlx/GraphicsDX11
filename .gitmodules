@@ -1,0 +1,3 @@
+[submodule "3rd/generalCMakeModule"]
+	path = 3rd/generalCMakeModule
+	url = ../GxCMakeModule
