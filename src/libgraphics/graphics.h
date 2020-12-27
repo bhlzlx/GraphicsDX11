@@ -16,11 +16,10 @@ enum class GraphicsApiType {
 class IDevice {
 public:
     virtual ITexture* createTexture( const ugi::TextureDescription& desc ) const;
-    virtual IRenderPass* createTexture( const ugi::RenderPassDescription& desc, ITexture** textures, ITexture* depthStencil );
-    virtual ISwapchain* 
+    virtual IRenderPass* createTexture( const ugi::RenderPassDescription& desc, ITexture** textures, ITexture* depthStencil ) const;
+    virtual IGraphicsPipeline* createGraphcisPipeline( const ugi::PipelineDescription& desc ) const;
+    // swapchain 接口不必要添加，因为这东西可以封装到一个 renderpass 内
 };
-
-
 
 IDevice* createDevice( GraphicsApiType apiType );
 
