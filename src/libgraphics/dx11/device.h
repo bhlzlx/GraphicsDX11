@@ -26,7 +26,8 @@ namespace dx11 {
         uint32_t minorVersion() const { return _minorVersion; }
     public:
         virtual ITexture* createTexture( const ugi::TextureDescription& desc ) const override ;
-        virtual IRenderPass* createTexture( const ugi::RenderPassDescription& desc, ITexture** textures, ITexture* depthStencil ) const override;
+        // virtual ITexture* createTexture( const )
+        virtual IRenderPass* createRenderPass( const ugi::RenderPassDescription& desc, ITexture** textures, ITexture* depthStencil ) const override;
         virtual IGraphicsPipeline* createGraphcisPipeline( const ugi::PipelineDescription& desc ) const override;
     };
 
